@@ -1,4 +1,5 @@
 const express = require('express');
+var path = require('path');
 const dotenv = require('dotenv');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
@@ -9,6 +10,7 @@ const app = express();
 app.use(cookieParser());
 app.use(cors());
 
+
 const scopes = ['user-read-currently-playing', 'user-read-playback-state'];
 
 const spotifyApi = new SpotifyWebApi({
@@ -16,6 +18,9 @@ const spotifyApi = new SpotifyWebApi({
     clientSecret: process.env.CLIENT_SECRET,
     redirectUri: process.env.REDIRECT_URI
 });
+
+// For production
+app.use(express.static(path.join(__dirname, 'client/build')));
 
 // Prompt the user to login
 app.get('/login', (req, res) => {
@@ -87,6 +92,10 @@ app.get('/current_track', async (req, res) => {
             res.send("Please play track from spotify")
         }
     });
+});
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
 });
 
 app.listen(8080, function () {

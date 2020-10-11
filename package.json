@@ -6,6 +6,7 @@
   "scripts": {
     "server": "nodemon index.js",
     "client": "cd client && npm start",
+    "start": "node index.js",
     "dev": "concurrently 'npm run client' 'npm run server'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,6 +17,7 @@
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "path": "^0.12.7",
     "spotify-web-api-node": "^5.0.0"
   },
   "devDependencies": {
