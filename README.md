@@ -6,10 +6,10 @@ Connect your spotify account and get either a sun scene or moon scene based off 
 Example:
 
 1. When playing Shake It Off by Taylor Swift
-<img src="https://media.giphy.com/media/deGkXPr7Eca34IU2X6/giphy.gif" width="200" height="200" />
+<img src="https://media.giphy.com/media/deGkXPr7Eca34IU2X6/giphy.gif" width="auto" height="300px" />
 
 2. When playing my tears ricochet by Taylor Swift
-<img src="https://media.giphy.com/media/0XSe0wYqjzRnmbGGtS/giphy.gif" width="200" height="200" />
+<img src="https://media.giphy.com/media/0XSe0wYqjzRnmbGGtS/giphy.gif" width="auto" height="300px" />
 
 Libraries/ Resources used:
 1. [spotify-web-api-node Spotify API Node wrapper](https://github.com/thelinmichael/spotify-web-api-node)
