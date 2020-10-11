@@ -51,7 +51,7 @@ app.get('/callback', (req, res) => {
         // Reset cookie with correct access_token
         res.cookie('SPOTIFY_ACCESS_TOKEN', access_token);
       }, expires_in / 2 * 1000);
-      res.redirect(APP_BASE_URI)
+      res.redirect(process.env.APP_BASE_URI)
     });
 });
 
