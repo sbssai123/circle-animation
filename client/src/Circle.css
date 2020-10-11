@@ -1,0 +1,165 @@
+body {
+  background: #000105;
+}
+
+.scene {
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.scene-description {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.login-text{
+  color: white;
+  font-size: 30px;
+}
+
+.get-started-button {
+  color: white;
+  background-color: #20D760;
+  border-radius: 12px;
+  padding: 20px;
+  font-size: 23px;
+  cursor: pointer;
+  margin-left: 40%;
+}
+
+.sunny-scene {
+  background: #8cd1f6;
+}
+
+.circle {
+  border-radius: 50%;
+  height: 400px;
+  width: 400px;
+  vertical-align: center;
+  margin-left: 35%;
+}
+
+.sun {
+  background :#f5cc44;
+  box-shadow: 0 0 10px #ffaf1a,
+                0 0 60px #ffaf1a,
+                0 0 200px #f0f004,
+                inset 0 0 300px #f0f004;
+  animation: sun 8s linear infinite;
+}
+
+.moon {
+  background :#ced3e4;
+  box-shadow: 0 0 10px #7b7a81,
+              0 0 60px #7b7a81,
+              0 0 200px #a0b2ee,
+              inset 0 0 300px #a0b2ee;
+}
+
+@keyframes sun {
+  0% {
+    transform: translate(-100px,0);
+  }
+  25% { /* note that rotation from 0 to 20 deg happens in 25% time = 0.45 seconds. */
+    transform: translate(100px,0);
+    box-shadow: 0 0 10px #ffaf1a,
+    0 0 60px #ffaf1a,
+    0 0 200px #f0f004,
+    inset 0 300px 300px #f0f004;
+  }
+  50% {
+    transform: translate(100px, 0);
+    box-shadow: 0 0 10px #ffaf1a,
+    0 0 60px #ffaf1a,
+    0 0 200px #f0f004,
+    inset 0 500px 300px #f0f004;
+  }
+  75% {
+    transform: translate(-100px, 0);
+    box-shadow: 0 0 10px #ffaf1a,
+    0 0 600px #ffaf1a,
+    0 0 200px #f0f004,
+    inset 0 0px 300px #f0f004;
+  }
+  100% {
+    transform: translate(-100px, 0);
+    box-shadow: 0 0 10px #ffaf1a,
+    0 0 60px #ffaf1a,
+    0 0 200px #f0f004,
+    inset 0 0px 100px #f0f004;
+  }  
+}
+
+.clouds {
+  width:120px;
+  height:120px; 
+  background:#ECEFF1;
+  opacity: .5;
+  border-radius:100px;
+  animation: clouds 15s linear infinite;
+}
+
+.clouds::before, .clouds::after {
+  content:"";
+  position:relative;
+  display:inline-block;
+  background:inherit;
+  border-radius:inherit;
+}
+
+.clouds::before {
+  position: relative;
+  border-radius: 50%;
+  top: -30px;
+  left: 60px;
+  width: 100px;
+  height: 100px; 
+}
+
+.clouds::after {
+  width: 200px;
+  height: 100px;
+  top: -80px;
+  left: 70px;
+}
+
+@keyframes clouds {
+  0%{
+    transform: translate(-100px,0);
+  }
+  100% {
+    transform: translate(100vw, 0);
+  }
+}
+
+.moon-scene {
+  background: #0f1768;
+}
+
+.empty-scene {
+  background: #000105;
+}
+
+.empty-scene-text {
+  color: #20D760;
+  font-size: 40px;
+  text-align: center;
+  padding-top: 15%;
+}
+
+.sun-font {
+  margin-left: 5%;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.moon-font {
+  margin-left: 5%;
+  font-size: 20px;
+  font-weight: bolder;
+  color: white;
+}
