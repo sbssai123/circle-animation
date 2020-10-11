@@ -10,6 +10,7 @@ const app = express();
 app.use(cookieParser());
 app.use(cors());
 
+const PORT_NUMBER = process.env.PORT || 8080
 
 const scopes = ['user-read-currently-playing', 'user-read-playback-state'];
 
@@ -98,6 +99,6 @@ app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
 });
 
-app.listen(8080, function () {
+app.listen(PORT_NUMBER, function () {
     console.log('Serving on port 8080');
 });
